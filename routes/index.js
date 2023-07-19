@@ -1,11 +1,9 @@
 var express = require('express');
 var router = express.Router();
-const skill = require('../models/skill');
 
-
-router.get('/', (req, res) => {
-  const skills = skill.getAll();
-  res.render('skills/index', { skills });
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Home Page' });
 });
 
 module.exports = router;

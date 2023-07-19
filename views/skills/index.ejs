@@ -1,25 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Coding skills looking?</title>
-</head>
-<body>
-  <main>
-    <nav>
-      <ul>
-        <li><a href="/">&lt; Back</a></li>
-      </ul>
-    </nav>
+<%- include('../partials/header') %>
 
-    <h1>How are my skills looking?</h1>
+<h3>Skills as of <%= time %></h3>
+<!-- this is been called from middleware in servers res.locals.time = new Date().toLocaleTimeString() -->
+<ul>
+  <% skills.forEach(function(t) { %>
+    <li>
+      <form 
+        action="/skills/<%= t.id %>?_method=DELETE" 
+        method="POST"
+        class="delete-form"
+      >
+        <button type="submit">X</button>
+      </form>
+      <a href="/skills/<%= t.id %>"><%= t.skill %></a>
+      -
+      <%= t.done ? 'done' : 'not done' %>
+    </li>
+  <% }); %>
+</ul>
+<a href="/skills/new">Add a new Skill</a>
+<!-- this adds a hyperlink to the /todos/new route -->
 
-    <ul>
-      <% skills.forEach(function(e) { %>
-        <li>
-          <a href="/skills/<%= e.id %>"><%= e.name %></a>
-        </li>
-      <% }); %>
-    </ul>
-  </main>
-</body>
-</html>
+<%- include('./partials/footer') %>
+<!-- those two lines will include the html from header and footer, we don't need the previous html -->

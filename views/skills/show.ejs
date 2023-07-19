@@ -1,22 +1,15 @@
-Copy code
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Where can I get lunch around here?</title>
-</head>
-<body>
-  <main>
-    <nav>
-      <ul>
-        <li><a href="/skills">&lt; Back</a></li>
-      </ul>
-    </nav>
+  <%- include('./partials/header') %>
+
+    <h3><%= skill.skill %></h3>>
 
     <hgroup>
       <h1><%= skill.name %></h1>
-      <h2><strong><%= skill.difficulty %></strong> - <small><%= skill.mastered %></small></h2>
-      <h6><%= skill.confidence %></h6>
+      <h2><strong>Difficulty: <%= skill.difficulty %></strong><br>
+      <small>Mastered? <%= skill.mastered %></small></h2>
+      <h6>Confidence on the skill? <%= skill.confidence %></h6>
     </hgroup>
-  </main>
-</body>
-</html>
+    <a href="/todos/<%= skill.id%>/edit">Edit Skill</a>
+
+<%- include('../partials/footer') %>
