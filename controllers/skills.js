@@ -30,7 +30,7 @@ function edit(req, res) {
 }
 
 function deleteSkill(req, res) {
-  Skill.deleteOne(req.params.id);
+  skill.deleteOne(req.params.id);
   res.redirect('/skills');
 }
 
@@ -43,8 +43,6 @@ function create(req, res) {
 function newSkill(req, res) {
   res.render('skills/new', { title: 'New Skill' });
 }
-
-
 
 
 module.exports = {

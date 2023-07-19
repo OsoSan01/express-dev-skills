@@ -1,38 +1,40 @@
-module.exports = {
-  getAll,
-  getOne,
-  create,
-  deleteOne,
-  update
-};  
-  
+ 
+  module.exports = {
+    getAll,
+    getOne,
+    create,
+    deleteOne,
+    update
+  };  
+
+
   const devSkills = [
     {
       id: 175135,
       name: 'JavaScript',
       difficulty: 'hard',
-      mastered: false,
+      mastered: "NOT AT ALL",
       confidence: 'not existent'
     },
     {
       id: 278564,
       name: 'HTML',
       difficulty: 'easy',
-      mastered: false,
+      mastered: "Kind of...",
       confidence: 'kind of'
     },
     {
       id: 335634,
       name: 'Node and Express',
       difficulty: 'doom',
-      mastered: false,
+      mastered: "Nope",
       confidence: 'I will die'
     },
     {
       id: 485447,
       name: 'Knife and cooking',
       difficulty: 'God',
-      mastered: true,
+      mastered: "Samurai",
       confidence: 'My enemies will die'
     }
   ];
@@ -68,6 +70,3 @@ module.exports = {
     return devSkills.find(e => e.id === id);
   }
   
-
-  
-

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <%- include('./partials/header') %>
+  <%- include('../partials/header') %>
 
-    <h3><%= skill.skill %></h3>>
+    <h3><%= skill.skill %></h3>
 
     <hgroup>
       <h1><%= skill.name %></h1>
@@ -10,6 +10,6 @@
       <small>Mastered? <%= skill.mastered %></small></h2>
       <h6>Confidence on the skill? <%= skill.confidence %></h6>
     </hgroup>
-    <a href="/todos/<%= skill.id%>/edit">Edit Skill</a>
+    <a href="/skills/<%= skill.id%>/edit">Edit Skill</a>
 
 <%- include('../partials/footer') %>

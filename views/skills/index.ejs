@@ -12,14 +12,13 @@
       >
         <button type="submit">X</button>
       </form>
-      <a href="/skills/<%= t.id %>"><%= t.skill %></a>
-      -
-      <%= t.done ? 'done' : 'not done' %>
+      <a href="/skills/<%= t.id %>"><br>
+        <%= t.name %></a><br>
     </li>
   <% }); %>
 </ul>
 <a href="/skills/new">Add a new Skill</a>
 <!-- this adds a hyperlink to the /todos/new route -->
 
-<%- include('./partials/footer') %>
+<%- include('../partials/footer') %>
 <!-- those two lines will include the html from header and footer, we don't need the previous html -->
